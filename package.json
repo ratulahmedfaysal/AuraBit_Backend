@@ -1,10 +1,10 @@
 {
-<<<<<<< HEAD
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "node server/index.js",
     "dev": "concurrently \"vite\" \"nodemon server/index.js\"",
     "build": "vite build",
     "lint": "eslint .",
@@ -55,30 +55,4 @@
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
   }
-=======
-    "name": "aurabit-server",
-    "version": "1.0.0",
-    "description": "Backend for AuraBit",
-    "main": "index.js",
-    "type": "commonjs",
-    "scripts": {
-        "start": "node index.js",
-        "dev": "nodemon index.js"
-    },
-    "dependencies": {
-        "bcryptjs": "^2.4.3",
-        "cloudinary": "^1.41.3",
-        "cors": "^2.8.5",
-        "crypto-random-string": "^5.0.0",
-        "dotenv": "^16.3.1",
-        "express": "^4.18.2",
-        "jsonwebtoken": "^9.0.2",
-        "mongoose": "^8.0.3",
-        "multer": "^2.0.2",
-        "multer-storage-cloudinary": "^4.0.0",
-        "nodemon": "^3.0.2",
-        "qrcode": "^1.5.4",
-        "speakeasy": "^2.0.0"
-    }
->>>>>>> 7a8a7c98941cc73944c9fb9ad00fdf61255f23c6
 }
