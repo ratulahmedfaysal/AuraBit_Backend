@@ -28,6 +28,7 @@ const AdminLayout: React.FC = () => {
   const navigation = [
     { name: 'Dashboard', href: '/admin/dashboard', icon: Home },
     { name: 'Manage Users', href: '/admin/users', icon: Users },
+    { name: 'Manage Investments', href: '/admin/investments', icon: DollarSign },
     { name: 'Investment Plans', href: '/admin/plans', icon: CreditCard },
     { name: 'Referral Settings', href: '/admin/referrals', icon: UserCheck },
     { name: 'Payment Methods', href: '/admin/payment-methods', icon: DollarSign },

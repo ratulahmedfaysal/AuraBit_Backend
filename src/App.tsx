@@ -40,6 +40,7 @@ import AdminSettings from './pages/admin/AdminSettings';
 import { SiteSettingsProvider } from './contexts/SiteSettingsContext';
 import AdminContent from './pages/admin/AdminContent';
 import AdminDatabase from './pages/admin/AdminDatabase';
+import AdminInvestments from './pages/admin/AdminInvestments';
 
 import LoadingSpinner from './components/Common/LoadingSpinner';
 
@@ -177,6 +178,7 @@ const App: React.FC = () => {
                 <Route index element={<Navigate to="dashboard" replace />} />
                 <Route path="dashboard" element={<AdminDashboard />} />
                 <Route path="users" element={<AdminUsers />} />
+                <Route path="investments" element={<AdminInvestments />} />
                 <Route path="plans" element={<AdminPlans />} />
                 <Route path="referrals" element={<AdminReferrals />} />
                 <Route path="payment-methods" element={<AdminPaymentMethods />} />
