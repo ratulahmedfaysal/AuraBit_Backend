@@ -25,6 +25,12 @@ router.put('/:id', auth, async (req, res) => {
         if (typeof is_banned !== 'undefined') update.is_banned = is_banned;
         if (typeof balance !== 'undefined') update.balance = balance;
 
+        if (req.body.password) {
+            const bcrypt = require('bcryptjs');
+            const salt = await bcrypt.genSalt(10);
+            update.password = await bcrypt.hash(req.body.password, salt);
+        }
+
         const user = await User.findByIdAndUpdate(req.params.id, update, { new: true });
         res.json(user);
     } catch (err) {
