@@ -68,7 +68,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Basic Route
 app.get('/', (req, res) => {
-    res.send('AuraBit API is running');
+    res.send('AuraBit API is running. Version 1.0.1');
 });
 
 // Start Server
