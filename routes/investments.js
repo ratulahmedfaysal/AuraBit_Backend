@@ -107,7 +107,14 @@ router.post('/:id/claim', auth, async (req, res) => {
         const investment = await UserInvestment.findById(req.params.id).populate('plan_id');
         if (!investment) return res.status(404).json({ error: 'Investment not found' });
 
-        if (investment.user_id.toString() !== req.user) return res.status(403).json({ error: 'Access denied' });
+        console.log('Claim Debug:', {
+            reqUser: req.user,
+            invUserId: investment.user_id,
+            invUserIdString: investment.user_id.toString(),
+            match: investment.user_id.toString() === req.user
+        });
+
+        if (investment.user_id.toString() !== req.user.toString()) return res.status(403).json({ error: 'Access denied' });
 
         const now = new Date();
         const user = await User.findById(req.user);
